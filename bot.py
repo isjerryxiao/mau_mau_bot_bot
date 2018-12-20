@@ -468,7 +468,10 @@ async def new_msg_handler(event):
                             logger.info('Bot: Game started. I\'m the first player.')
                             game.start_game()
                 logger.info('Bot: It\'s my turn.')
-                if game.is_playing and game.joined and get_peer_id(unochat) in game.joined:
+                if game.joined and get_peer_id(unochat) in game.joined:
+                    if not game.is_playing:
+                        logger.info('Bot: Game started a long time ago. I joined midway.')
+                        game.start_game()
                     await inline_query()
                 else:
                     logger.info('I\'m not playing in {} - {}'.format(full_info[1].title, get_peer_id(unochat)))
