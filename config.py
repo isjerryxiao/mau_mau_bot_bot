@@ -19,8 +19,7 @@ unogroup_chatname = None
 
 # %username% %firstname% is available
 game_consts = {
-    'create' : 'Created a new game!', # do not enable translation!!! anyone who has choosed a different language will be ignored
-    #'create': 'Created a new game!|on_game_created', # this is defined for @unounofficialbot, a workaround for the problem above
+    'create' : 'Created a new game!|创建新游戏成功！|已經開始咗新一盤!|已開始新的遊戲!|Novo jogo criado!', #en_US, zh_CN, zh_HK, zh_TW, pt_BR
     'end'    : 'Game ended',
     'start'  : 'First player:',
     'win'    : '%firstname% won!',
