@@ -110,10 +110,9 @@ async def inline_query(fail=None):
         INTERVAL = 5
         seconds = int(seconds)
         if seconds <= 0:
-            await set_typing()
+            pass
         else:
             if seconds <= INTERVAL:
-                await set_typing()
                 await asyncio.sleep(INTERVAL)
             else:
                 rounds = int(seconds/INTERVAL)
